@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F7EA167-2581-46E2-925C-24EFEDE945A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lurin.meurhonline.domain.model</RootNamespace>
+    <AssemblyName>lurin.meurhonline.domain.model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastro\BancoModel.cs" />
+    <Compile Include="Cadastro\BeneficioModel.cs" />
+    <Compile Include="Cadastro\BeneficioTipoModel.cs" />
+    <Compile Include="Cadastro\CargoPlanoModel.cs" />
+    <Compile Include="Cadastro\CargoPlanoUnidadeModel.cs" />
+    <Compile Include="Cadastro\CargoUnidadeModel.cs" />
+    <Compile Include="Cadastro\CategoriaSalarialModel.cs" />
+    <Compile Include="Cadastro\CentroCustoPlanoModel.cs" />
+    <Compile Include="Cadastro\CentroCustoPlanoUnidadeModel.cs" />
+    <Compile Include="Cadastro\ColaboradorEmail.cs" />
+    <Compile Include="Cadastro\CidadeModel.cs" />
+    <Compile Include="Cadastro\ColaboradorDocumentacaoModel.cs" />
+    <Compile Include="Cadastro\ColaboradorDocumentoAdmissionalModel.cs" />
+    <Compile Include="Cadastro\ColaboradorFuncionarioModel.cs" />
+    <Compile Include="Cadastro\ColaboradorEmpregadorModel.cs" />
+    <Compile Include="Cadastro\ColaboradorEstrangeiroModel.cs" />
+    <Compile Include="Cadastro\ColaboradorEstrangeiroTipoVistoModel.cs" />
+    <Compile Include="Cadastro\ColaboradorModel.cs" />
+    <Compile Include="Cadastro\ColaboradorPagamentoModel.cs" />
+    <Compile Include="Cadastro\ColaboradorTipoModel.cs" />
+    <Compile Include="Cadastro\ContaBancariaTipoModel.cs" />
+    <Compile Include="Cadastro\DependenteModel.cs" />
+    <Compile Include="Cadastro\DocumentoAdmissionalModel.cs" />
+    <Compile Include="Cadastro\EmpresaDocumentoAdmissionalModel.cs" />
+    <Compile Include="Cadastro\EmpresaEmpresaFuncionalidadeModel.cs" />
+    <Compile Include="Cadastro\EmpresaMatrizModel.cs" />
+    <Compile Include="Cadastro\EmpresaModel.cs" />
+    <Compile Include="Cadastro\EmpresaTipoModel.cs" />
+    <Compile Include="Cadastro\EquipeGestorModel.cs" />
+    <Compile Include="Cadastro\EstadoCivilModel.cs" />
+    <Compile Include="Cadastro\GrauInstrucaoModel.cs" />
+    <Compile Include="Cadastro\UFModel.cs" />
+    <Compile Include="Enum\DocumentoAdmissionalEnum.cs" />
+    <Compile Include="Enum\FornecedorHolerite.cs" />
+    <Compile Include="Enum\LancamentoStatusEnum.cs" />
+    <Compile Include="Enum\LancamentoStatusModel.cs" />
+    <Compile Include="Enum\NotificacaoDetalheStatusEnum.cs" />
+    <Compile Include="Enum\NotificacaoDetalheStatusModel.cs" />
+    <Compile Include="Enum\SolicitacaoBeneficioDependenteStatusEnum.cs" />
+    <Compile Include="Enum\SolicitacaoBeneficioDependenteStatusModel.cs" />
+    <Compile Include="Enum\SolicitacaoStatusEnum.cs" />
+    <Compile Include="Enum\ColaboradorStatusEnum.cs" />
+    <Compile Include="Enum\ColaboradorStatusModel.cs" />
+    <Compile Include="Enum\EmpresaStatusEnum .cs" />
+    <Compile Include="Enum\EmpresaStatusModel.cs" />
+    <Compile Include="Enum\MenuStatusEnum.cs" />
+    <Compile Include="Enum\MenuStatusModel.cs" />
+    <Compile Include="Enum\NotificacaoStatusLeituraEnum.cs" />
+    <Compile Include="Enum\SolicitacaoStatusModel.cs" />
+    <Compile Include="Enum\UsuarioColaboradorTipoEnum.cs" />
+    <Compile Include="Enum\ValeTransporteDiasSemanaEnum.cs" />
+    <Compile Include="ErrorModel.cs" />
+    <Compile Include="Cadastro\EmpresaFuncionalidadeModel.cs" />
+    <Compile Include="Cadastro\LinhaVTModel.cs" />
+    <Compile Include="Cadastro\LotacaoPlanoModel.cs" />
+    <Compile Include="Cadastro\LotacaoPlanoUnidadeModel.cs" />
+    <Compile Include="Cadastro\LotacaoUnidadeModel.cs" />
+    <Compile Include="Cadastro\MarmitexModel.cs" />
+    <Compile Include="Cadastro\MotivoHoraExtraModel.cs" />
+    <Compile Include="Cadastro\JustificativaDivergenciaModel.cs" />
+    <Compile Include="Cadastro\CentroCustoUnidadeModel.cs" />
+    <Compile Include="Importação\AbsenteismoLogModel.cs" />
+    <Compile Include="Importação\AbsenteismoModel.cs" />
+    <Compile Include="Importação\BancoHorasLogModel.cs" />
+    <Compile Include="Importação\BancoHorasModel.cs" />
+    <Compile Include="Importação\DivergenciaDetalheModel.cs" />
+    <Compile Include="Importação\DivergenciaLogModel.cs" />
+    <Compile Include="Importação\AvisoFeriasLogModel.cs" />
+    <Compile Include="Importação\AvisoFeriasModel.cs" />
+    <Compile Include="Importação\CartaoPontoLogModel.cs" />
+    <Compile Include="Importação\FeriasLogModel.cs" />
+    <Compile Include="Importação\FeriasConcessaoModel.cs" />
+    <Compile Include="Importação\FeriasPeriodoModel.cs" />
+    <Compile Include="Importação\HoleriteEventoModel.cs" />
+    <Compile Include="Importação\HoleriteLogModel.cs" />
+    <Compile Include="Importação\HoleriteModel.cs" />
+    <Compile Include="Importação\ReciboFeriasLogModel.cs" />
+    <Compile Include="Importação\InformeRendimentoLogModel.cs" />
+    <Compile Include="Importação\ReciboFeriasDescontoModel.cs" />
+    <Compile Include="Importação\DivergenciaModel.cs" />
+    <Compile Include="Importação\FeriasModel.cs" />
+    <Compile Include="Importação\ReciboFeriasVencimentoModel.cs" />
+    <Compile Include="Importação\ReciboFeriasModel.cs" />
+    <Compile Include="Importação\TipoRendimentoSujeitosTribModel.cs" />
+    <Compile Include="Importação\TipoRendimentoIsentosModel.cs" />
+    <Compile Include="Importação\TipoRendimentoTributaveisModel.cs" />
+    <Compile Include="Importação\TipoRendimentoRecebModel.cs" />
+    <Compile Include="Importação\InformeRendimentoModel.cs" />
+    <Compile Include="Lançamento\AtestadoModel.cs" />
+    <Compile Include="Importação\CartaoPontoDetalheModel.cs" />
+    <Compile Include="Importação\CartaoPontoCabecalhoModel.cs" />
+    <Compile Include="Importação\CartaoPontoModel.cs" />
+    <Compile Include="Login\LoginModel.cs" />
+    <Compile Include="Enum\UsuarioColaboradorTipoModel.cs" />
+    <Compile Include="Login\MenuModel.cs" />
+    <Compile Include="Login\TokenModel.cs" />
+    <Compile Include="Notificação\NotificacaoModel.cs" />
+    <Compile Include="Enum\NotificacaoStatusLeituraModel.cs" />
+    <Compile Include="Notificação\NotificacaoDetalheModel.cs" />
+    <Compile Include="Cadastro\OperadoraVTModel.cs" />
+    <Compile Include="Cadastro\OperadoraVTBandeiraCartaoModel.cs" />
+    <Compile Include="Cadastro\OperadoraVTTarifaTipoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cadastro\SindicatoModel.cs" />
+    <Compile Include="Cadastro\TipoRegistroModel.cs" />
+    <Compile Include="Cadastro\TipoMaoObraModel.cs" />
+    <Compile Include="Cadastro\TurnoDetalheModel.cs" />
+    <Compile Include="Cadastro\TurnoModel.cs" />
+    <Compile Include="Cadastro\UnidadeNegocioModel.cs" />
+    <Compile Include="Cadastro\UsuarioModel.cs" />
+    <Compile Include="Solicitação\AlteracaoCadastralModel.cs" />
+    <Compile Include="Solicitação\BeneficioColaboradorModel.cs" />
+    <Compile Include="Solicitação\BeneficioDependenteModel.cs" />
+    <Compile Include="Solicitação\DesligamentoModel.cs" />
+    <Compile Include="Solicitação\DesligamentoTipoModel.cs" />
+    <Compile Include="Solicitação\MovimentacaoContratualModel.cs" />
+    <Compile Include="Solicitação\SolicitacaoHoraExtraColaboradorModel.cs" />
+    <Compile Include="Solicitação\SolicitacaoHoraExtraModel.cs" />
+    <Compile Include="Solicitação\ValeTransporteModel.cs" />
+    <Compile Include="Solicitação\ValeTransporteSituacaoModel.cs" />
+    <Compile Include="Solicitação\ValeTransporteUtilizacaoModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56A77E18-61E6-4FD0-88B2-2A122CD8C108}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lurin.meurhonline.domain</RootNamespace>
+    <AssemblyName>lurin.meurhonline.domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="FileHelpers, Version=3.4.2.0, Culture=neutral, PublicKeyToken=3e0c08d59cc3d657, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FileHelpers.3.4.2\lib\net45\FileHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constantes\Constantes.cs" />
+    <Compile Include="Interface\INotificacao.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Importação\BancoHorasDomain.cs" />
+    <Compile Include="Importação\AbsenteismoDomain.cs" />
+    <Compile Include="Importação\DivergenciaDomain.cs" />
+    <Compile Include="Importação\Layout\LayoutBancoHoras.cs" />
+    <Compile Include="Importação\Layout\LayoutFerias.cs" />
+    <Compile Include="Importação\HoleriteDomain.cs" />
+    <Compile Include="Importação\Layout\LayoutDivergencia.cs" />
+    <Compile Include="Importação\FeriasDomain.cs" />
+    <Compile Include="Importação\Layout\LayoutHolerite.cs" />
+    <Compile Include="Interface\IBancoHorasDomain.cs" />
+    <Compile Include="Interface\IAbsenteismoDomain.cs" />
+    <Compile Include="Interface\IDivergenciaDomain.cs" />
+    <Compile Include="Importação\AvisoFeriasDomain.cs" />
+    <Compile Include="Importação\Layout\LayoutAvisoFerias.cs" />
+    <Compile Include="Interface\IAvisoFeriasDomain.cs" />
+    <Compile Include="Interface\IFeriasDomain.cs" />
+    <Compile Include="Interface\IHoleriteDomain.cs" />
+    <Compile Include="Interface\IReciboFeriasDomain.cs" />
+    <Compile Include="Importação\ReciboFeriasDomain.cs" />
+    <Compile Include="Importação\Layout\LayoutReciboFerias.cs" />
+    <Compile Include="Importação\Layout\LayoutInformeRendimento.cs" />
+    <Compile Include="Importação\InformeRendimentoDomain.cs" />
+    <Compile Include="Interface\IInformeRendimentoDomain.cs" />
+    <Compile Include="Importação\CartaoPontoDomain.cs" />
+    <Compile Include="Importação\Layout\LayoutArquivoCartaoPonto.cs" />
+    <Compile Include="Interface\IBeneficio.cs" />
+    <Compile Include="Interface\ICartaoPontoDomain.cs" />
+    <Compile Include="Notificacao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\lurin.meurhonline.infrastructure\lurin.meurhonline.infrastructure.csproj">
+      <Project>{592920b7-9870-4fad-a94c-1583545be63d}</Project>
+      <Name>lurin.meurhonline.infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lurin.meurhonline.domain.model\lurin.meurhonline.domain.model.csproj">
+      <Project>{7f7ea167-2581-46e2-925c-24efede945a1}</Project>
+      <Name>lurin.meurhonline.domain.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lurin.meurhonline.domain.repository\lurin.meurhonline.domain.repository.csproj">
+      <Project>{ff0f3bdd-705d-461a-b685-96ae24142e02}</Project>
+      <Name>lurin.meurhonline.domain.repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

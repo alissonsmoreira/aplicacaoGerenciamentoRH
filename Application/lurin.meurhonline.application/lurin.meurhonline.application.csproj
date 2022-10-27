@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DD18B50-7757-4900-A6D7-E1F64171283D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lurin.meurhonline.application</RootNamespace>
+    <AssemblyName>lurin.meurhonline.application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastro\BeneficioFacade.cs" />
+    <Compile Include="Cadastro\CargoPlanoFacade.cs" />
+    <Compile Include="Cadastro\CargoUnidadeFacade.cs" />
+    <Compile Include="Cadastro\CategoriaSalarialFacade.cs" />
+    <Compile Include="Cadastro\CentroCustoPlanoFacade.cs" />
+    <Compile Include="Cadastro\CidadeFacade.cs" />
+    <Compile Include="Cadastro\ColaboradorDocumentacaoFacade.cs" />
+    <Compile Include="Cadastro\ColaboradorDocumentoAdmissionalFacade.cs" />
+    <Compile Include="Cadastro\ColaboradorEmpregadorFacade.cs" />
+    <Compile Include="Cadastro\ColaboradorEstrangeiroFacade.cs" />
+    <Compile Include="Cadastro\ColaboradorFacade.cs" />
+    <Compile Include="Cadastro\ColaboradorPagamentoFacade.cs" />
+    <Compile Include="Cadastro\DependenteFacade.cs" />
+    <Compile Include="Cadastro\DocumentoAdmissionalFacade.cs" />
+    <Compile Include="Cadastro\EmpresaFacade.cs" />
+    <Compile Include="Cadastro\EquipeGestorFacade.cs" />
+    <Compile Include="Cadastro\EstadoCivilFacade.cs" />
+    <Compile Include="Cadastro\GrauInstrucaoFacade.cs" />
+    <Compile Include="Cadastro\LinhaVTFacade.cs" />
+    <Compile Include="Cadastro\LotacaoPlanoFacade.cs" />
+    <Compile Include="Cadastro\LotacaoUnidadeFacade.cs" />
+    <Compile Include="Cadastro\MarmitexFacade.cs" />
+    <Compile Include="Cadastro\MotivoHoraExtraFacade.cs" />
+    <Compile Include="Cadastro\JustificativaDivergenciaFacade.cs" />
+    <Compile Include="Cadastro\CentroCustoUnidadeFacade.cs" />
+    <Compile Include="Cadastro\OperadoraVTBandeiraCartaoFacade.cs" />
+    <Compile Include="Cadastro\OperadoraVTFacade.cs" />
+    <Compile Include="Cadastro\PagamentoFacade.cs" />
+    <Compile Include="Cadastro\SindicatoFacade.cs" />
+    <Compile Include="Cadastro\TurnoFacade.cs" />
+    <Compile Include="Cadastro\UFFacade.cs" />
+    <Compile Include="Cadastro\UsuarioFacade.cs" />
+    <Compile Include="Importação\BancoHorasFacade.cs" />
+    <Compile Include="Importação\AbsenteismoFacade.cs" />
+    <Compile Include="Importação\DivergenciaFacade.cs" />
+    <Compile Include="Importação\AvisoFeriasFacade.cs" />
+    <Compile Include="Importação\FeriasFacade.cs" />
+    <Compile Include="Importação\HoleriteFacade.cs" />
+    <Compile Include="Importação\ReciboFeriasFacade.cs" />
+    <Compile Include="Importação\InformeRendimentoFacade.cs" />
+    <Compile Include="Lançamento\AtestadoFacade.cs" />
+    <Compile Include="Lançamento\LancamentoFacade.cs" />
+    <Compile Include="Importação\CartaoPontoFacade.cs" />
+    <Compile Include="Login\LoginFacade.cs" />
+    <Compile Include="Notificação\NotificacaoFacade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cadastro\TipoRegistroFacade.cs" />
+    <Compile Include="Cadastro\TipoMaoObraFacade.cs" />
+    <Compile Include="Cadastro\UnidadeNegocioFacade.cs" />
+    <Compile Include="Solicitação\AlteracaoCadastralFacade.cs" />
+    <Compile Include="Solicitação\BeneficioColaboradorFacade.cs" />
+    <Compile Include="Solicitação\BeneficioDependenteFacade.cs" />
+    <Compile Include="Solicitação\DesligamentoFacade.cs" />
+    <Compile Include="Solicitação\MovimentacaoContratualFacade.cs" />
+    <Compile Include="Solicitação\SolicitacaoFacade.cs" />
+    <Compile Include="Solicitação\SolicitacaoHoraExtraFacade.cs" />
+    <Compile Include="Solicitação\ValeTransporteFacade.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\lurin.meurhonline.domain.model\lurin.meurhonline.domain.model.csproj">
+      <Project>{7f7ea167-2581-46e2-925c-24efede945a1}</Project>
+      <Name>lurin.meurhonline.domain.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\lurin.meurhonline.domain.repository\lurin.meurhonline.domain.repository.csproj">
+      <Project>{ff0f3bdd-705d-461a-b685-96ae24142e02}</Project>
+      <Name>lurin.meurhonline.domain.repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\lurin.meurhonline.domain\lurin.meurhonline.domain.csproj">
+      <Project>{56a77e18-61e6-4fd0-88b2-2a122cd8c108}</Project>
+      <Name>lurin.meurhonline.domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\lurin.meurhonline.infrastructure\lurin.meurhonline.infrastructure.csproj">
+      <Project>{592920b7-9870-4fad-a94c-1583545be63d}</Project>
+      <Name>lurin.meurhonline.infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

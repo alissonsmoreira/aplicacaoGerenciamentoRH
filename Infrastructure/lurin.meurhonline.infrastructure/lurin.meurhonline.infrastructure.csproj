@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{592920B7-9870-4FAD-A94C-1583545BE63D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lurin.meurhonline.infrastructure</RootNamespace>
+    <AssemblyName>lurin.meurhonline.infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.1.3.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.6.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.4.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.5.6.0\lib\net45\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Exception\EntityValidationException.cs" />
+    <Compile Include="Factory\DomainFactory.cs" />
+    <Compile Include="Factory\Interface\IOperation.cs" />
+    <Compile Include="Factory\Interface\IRepositoryCustom.cs" />
+    <Compile Include="Factory\RepositoryFactory.cs" />
+    <Compile Include="Invoke\ApiInvoke.cs" />
+    <Compile Include="Invoke\Interface\IApiInvoke.cs" />
+    <Compile Include="IO\FileOperation.cs" />
+    <Compile Include="IO\FileType.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Mail\Mail.cs" />
+    <Compile Include="Mail\MailType.cs" />
+    <Compile Include="Migrations\202103082205193_Initial.cs" />
+    <Compile Include="Migrations\202103082205193_Initial.Designer.cs">
+      <DependentUpon>202103082205193_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103120057077_ajuste-cartao-ponto.cs" />
+    <Compile Include="Migrations\202103120057077_ajuste-cartao-ponto.Designer.cs">
+      <DependentUpon>202103120057077_ajuste-cartao-ponto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103121902412_ajuste-divergencia.cs" />
+    <Compile Include="Migrations\202103121902412_ajuste-divergencia.Designer.cs">
+      <DependentUpon>202103121902412_ajuste-divergencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103121425355_Menu-InsertColumn-PreAdmissaoPermissao.cs" />
+    <Compile Include="Migrations\202103121425355_Menu-InsertColumn-PreAdmissaoPermissao.Designer.cs">
+      <DependentUpon>202103121425355_Menu-InsertColumn-PreAdmissaoPermissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103130230409_ajuste-ferias.cs" />
+    <Compile Include="Migrations\202103130230409_ajuste-ferias.Designer.cs">
+      <DependentUpon>202103130230409_ajuste-ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103130327598_ajuste-recibo-ferias.cs" />
+    <Compile Include="Migrations\202103130327598_ajuste-recibo-ferias.Designer.cs">
+      <DependentUpon>202103130327598_ajuste-recibo-ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103131620409_ajustes-aviso-ferias.cs" />
+    <Compile Include="Migrations\202103131620409_ajustes-aviso-ferias.Designer.cs">
+      <DependentUpon>202103131620409_ajustes-aviso-ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103131804507_ajustes-holerite-empresaid.cs" />
+    <Compile Include="Migrations\202103131804507_ajustes-holerite-empresaid.Designer.cs">
+      <DependentUpon>202103131804507_ajustes-holerite-empresaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103131434245_BancoHoras.cs" />
+    <Compile Include="Migrations\202103131434245_BancoHoras.Designer.cs">
+      <DependentUpon>202103131434245_BancoHoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103131441139_BancoHorasLog.cs" />
+    <Compile Include="Migrations\202103131441139_BancoHorasLog.Designer.cs">
+      <DependentUpon>202103131441139_BancoHorasLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103161633313_importacao-absenteismo.cs" />
+    <Compile Include="Migrations\202103161633313_importacao-absenteismo.Designer.cs">
+      <DependentUpon>202103161633313_importacao-absenteismo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103161741455_Desligamento-add-DataDesligamento.cs" />
+    <Compile Include="Migrations\202103161741455_Desligamento-add-DataDesligamento.Designer.cs">
+      <DependentUpon>202103161741455_Desligamento-add-DataDesligamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103170323198_solicitacao-ferias.cs" />
+    <Compile Include="Migrations\202103170323198_solicitacao-ferias.Designer.cs">
+      <DependentUpon>202103170323198_solicitacao-ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103171638252_OperadoraVTBandeiraCartao-Identity.cs" />
+    <Compile Include="Migrations\202103171638252_OperadoraVTBandeiraCartao-Identity.Designer.cs">
+      <DependentUpon>202103171638252_OperadoraVTBandeiraCartao-Identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103171641034_OperadoraVTBandeiraCartao-DataCadastro.cs" />
+    <Compile Include="Migrations\202103171641034_OperadoraVTBandeiraCartao-DataCadastro.Designer.cs">
+      <DependentUpon>202103171641034_OperadoraVTBandeiraCartao-DataCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103172357021_DivergenciaDetalhe-Aprovacao.cs" />
+    <Compile Include="Migrations\202103172357021_DivergenciaDetalhe-Aprovacao.Designer.cs">
+      <DependentUpon>202103172357021_DivergenciaDetalhe-Aprovacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103181646525_CartaoPonto-add-aprovacao.cs" />
+    <Compile Include="Migrations\202103181646525_CartaoPonto-add-aprovacao.Designer.cs">
+      <DependentUpon>202103181646525_CartaoPonto-add-aprovacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103191529250_ajuste-relatorio-divergencia.cs" />
+    <Compile Include="Migrations\202103191529250_ajuste-relatorio-divergencia.Designer.cs">
+      <DependentUpon>202103191529250_ajuste-relatorio-divergencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103192012358_correcao-recibo-ferias.cs" />
+    <Compile Include="Migrations\202103192012358_correcao-recibo-ferias.Designer.cs">
+      <DependentUpon>202103192012358_correcao-recibo-ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103192105587_BeneficioDependente.cs" />
+    <Compile Include="Migrations\202103192105587_BeneficioDependente.Designer.cs">
+      <DependentUpon>202103192105587_BeneficioDependente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103211913161_SolicitacaoHoraExtra.cs" />
+    <Compile Include="Migrations\202103211913161_SolicitacaoHoraExtra.Designer.cs">
+      <DependentUpon>202103211913161_SolicitacaoHoraExtra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103222002168_correcao-informe-rendimento.cs" />
+    <Compile Include="Migrations\202103222002168_correcao-informe-rendimento.Designer.cs">
+      <DependentUpon>202103222002168_correcao-informe-rendimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103230137582_ValeTransporte-DiasSemana.cs" />
+    <Compile Include="Migrations\202103230137582_ValeTransporte-DiasSemana.Designer.cs">
+      <DependentUpon>202103230137582_ValeTransporte-DiasSemana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103241636213_Sindicato-alteracaoDataBase.cs" />
+    <Compile Include="Migrations\202103241636213_Sindicato-alteracaoDataBase.Designer.cs">
+      <DependentUpon>202103241636213_Sindicato-alteracaoDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103251429000_ColaboradorDocumentacao-DataEmissaoPISNITNIS-ModifyToAcceptNull.cs" />
+    <Compile Include="Migrations\202103251429000_ColaboradorDocumentacao-DataEmissaoPISNITNIS-ModifyToAcceptNull.Designer.cs">
+      <DependentUpon>202103251429000_ColaboradorDocumentacao-DataEmissaoPISNITNIS-ModifyToAcceptNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103261741179_NotificaDetalhe-AddColumns.cs" />
+    <Compile Include="Migrations\202103261741179_NotificaDetalhe-AddColumns.Designer.cs">
+      <DependentUpon>202103261741179_NotificaDetalhe-AddColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103261824137_NotificaDetalhe-Modify-NotificacaoStatusId-To-NotificacaoDetalheStatusId.cs" />
+    <Compile Include="Migrations\202103261824137_NotificaDetalhe-Modify-NotificacaoStatusId-To-NotificacaoDetalheStatusId.Designer.cs">
+      <DependentUpon>202103261824137_NotificaDetalhe-Modify-NotificacaoStatusId-To-NotificacaoDetalheStatusId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109231834341_20210923_FornecedorHolerite_AddColumns.cs" />
+    <Compile Include="Migrations\202109231834341_20210923_FornecedorHolerite_AddColumns.Designer.cs">
+      <DependentUpon>202109231834341_20210923_FornecedorHolerite_AddColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110141920304_20211014_DivergenciaDetalhe_AddColumns_JustificativaDivergenciaID.cs" />
+    <Compile Include="Migrations\202110141920304_20211014_DivergenciaDetalhe_AddColumns_JustificativaDivergenciaID.Designer.cs">
+      <DependentUpon>202110141920304_20211014_DivergenciaDetalhe_AddColumns_JustificativaDivergenciaID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110142131494_20211014_DivergenciaDetalhe_EditColumn_JustificativaDivergenciaID.cs" />
+    <Compile Include="Migrations\202110142131494_20211014_DivergenciaDetalhe_EditColumn_JustificativaDivergenciaID.Designer.cs">
+      <DependentUpon>202110142131494_20211014_DivergenciaDetalhe_EditColumn_JustificativaDivergenciaID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110201943382_PropriedadeNavegacaoJustificativaDivergenciaDetalhe.cs" />
+    <Compile Include="Migrations\202110201943382_PropriedadeNavegacaoJustificativaDivergenciaDetalhe.Designer.cs">
+      <DependentUpon>202110201943382_PropriedadeNavegacaoJustificativaDivergenciaDetalhe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202112305407_AdicaoColunaTabelaDocumentos.cs" />
+    <Compile Include="Migrations\202202112305407_AdicaoColunaTabelaDocumentos.Designer.cs">
+      <DependentUpon>202202112305407_AdicaoColunaTabelaDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\Interface\IRepository.cs" />
+    <Compile Include="Persistence\Interface\IUnitOfWorkCustom .cs" />
+    <Compile Include="Persistence\Interface\IUnitOfWork.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\BancoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorDocumentacaoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorDocumentoAdmissionalMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorEmpregadorMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorEstrangeiroMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorEstrangeiroTipoVistoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorPagamentoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ColaboradorTipoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\ContaBancariaTipoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EmpresaTipoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\BeneficioTipoMap .cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\BeneficioMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CargoPlanoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CargoPlanoUnidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CargoUnidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CategoriaSalarialMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CentroCustoPlanoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CentroCustoPlanoUnidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\DependenteMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\DocumentoAdmissionalMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EmpresaDocumentoAdmissionalMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EmpresaEmpresaFuncionalidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EmpresaMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EmpresaFuncionalidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EquipeGestorMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\EstadoCivilMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\GrauInstrucaoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\LinhaVTMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\LotacaoPlanoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\LotacaoPlanoUnidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\LotacaoUnidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\MarmitexMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\UFMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\AbsenteismoLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\AbsenteismoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\BancoHorasLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\BancoHorasMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\DivergenciaDetalheMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\DivergenciaLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\AvisoFeriasLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\AvisoFeriasMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\FeriasConcessaoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\FeriasPeriodoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\HoleriteEventoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\HoleriteLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\HoleriteMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\InformeRendimentoLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\ReciboFeriasDescontoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\DivergenciaMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\FeriasMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\FeriasLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\ReciboFeriasVencimentoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\ReciboFeriasLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\ReciboFeriasMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\TipoRendimentoSujeitoTribMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\TipoRendimentoIsentosMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\TipoRendimentoTributaveisMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\TipoRendimentoRecebMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\InformeRendimentoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\CartaoPontoDetalheMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\CartaoPontoCabecalhoMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\CartaoPontoLogMap.cs" />
+    <Compile Include="Persistence\Mappers\Importação\CartaoPontoMap.cs" />
+    <Compile Include="Persistence\Mappers\Lançamento\AtestadoMap.cs" />
+    <Compile Include="Persistence\Mappers\Login\LoginMap.cs" />
+    <Compile Include="Persistence\Mappers\Login\MenuMap.cs" />
+    <Compile Include="Persistence\Mappers\Login\UsuarioColaboradorTipoMap.cs" />
+    <Compile Include="Persistence\Mappers\Notificação\NotificacaoMap.cs" />
+    <Compile Include="Persistence\Mappers\Notificação\NotificacaoDetalheMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\OperadoraVTMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\OperadoraVTBandeiraCartaoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\OperadoraVTTarifaTipoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\SindicatoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\TipoRegistroMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\MotivoHoraExtraMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\TipoMaoObraMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\JustificativaDivergenciaMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\CentroCustoUnidadeMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\TurnoDetalheMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\TurnoMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\UnidadeNegocioMap.cs" />
+    <Compile Include="Persistence\Mappers\Cadastro\UsuarioMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\AlteracaoCadastralMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\BeneficioColaboradorMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\BeneficioDependenteMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\DesligamentoMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\DesligamentoTipoMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\MovimentacaoContratualMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\SolicitacaoHoraExtraColaboradorMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\SolicitacaoHoraExtraMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\ValeTransporteMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\ValeTransporteSituacaoMap.cs" />
+    <Compile Include="Persistence\Mappers\Solicitação\ValeTransporteUtilizacaoMap.cs" />
+    <Compile Include="Persistence\Repository.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config" />
+    <EmbeddedResource Include="Mail\Message\TemplateEmailReenvio.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Message\TemplateEmailRecuperarSenha.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\Message\TemplateEmailNovoUsuario.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103082205193_Initial.resx">
+      <DependentUpon>202103082205193_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103120057077_ajuste-cartao-ponto.resx">
+      <DependentUpon>202103120057077_ajuste-cartao-ponto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103121902412_ajuste-divergencia.resx">
+      <DependentUpon>202103121902412_ajuste-divergencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103121425355_Menu-InsertColumn-PreAdmissaoPermissao.resx">
+      <DependentUpon>202103121425355_Menu-InsertColumn-PreAdmissaoPermissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103130230409_ajuste-ferias.resx">
+      <DependentUpon>202103130230409_ajuste-ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103130327598_ajuste-recibo-ferias.resx">
+      <DependentUpon>202103130327598_ajuste-recibo-ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103131434245_BancoHoras.resx">
+      <DependentUpon>202103131434245_BancoHoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103131441139_BancoHorasLog.resx">
+      <DependentUpon>202103131441139_BancoHorasLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103131620409_ajustes-aviso-ferias.resx">
+      <DependentUpon>202103131620409_ajustes-aviso-ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103131804507_ajustes-holerite-empresaid.resx">
+      <DependentUpon>202103131804507_ajustes-holerite-empresaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103161633313_importacao-absenteismo.resx">
+      <DependentUpon>202103161633313_importacao-absenteismo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103161741455_Desligamento-add-DataDesligamento.resx">
+      <DependentUpon>202103161741455_Desligamento-add-DataDesligamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103170323198_solicitacao-ferias.resx">
+      <DependentUpon>202103170323198_solicitacao-ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103171638252_OperadoraVTBandeiraCartao-Identity.resx">
+      <DependentUpon>202103171638252_OperadoraVTBandeiraCartao-Identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103171641034_OperadoraVTBandeiraCartao-DataCadastro.resx">
+      <DependentUpon>202103171641034_OperadoraVTBandeiraCartao-DataCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103172357021_DivergenciaDetalhe-Aprovacao.resx">
+      <DependentUpon>202103172357021_DivergenciaDetalhe-Aprovacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103181646525_CartaoPonto-add-aprovacao.resx">
+      <DependentUpon>202103181646525_CartaoPonto-add-aprovacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103191529250_ajuste-relatorio-divergencia.resx">
+      <DependentUpon>202103191529250_ajuste-relatorio-divergencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103192012358_correcao-recibo-ferias.resx">
+      <DependentUpon>202103192012358_correcao-recibo-ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103192105587_BeneficioDependente.resx">
+      <DependentUpon>202103192105587_BeneficioDependente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103211913161_SolicitacaoHoraExtra.resx">
+      <DependentUpon>202103211913161_SolicitacaoHoraExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103222002168_correcao-informe-rendimento.resx">
+      <DependentUpon>202103222002168_correcao-informe-rendimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103230137582_ValeTransporte-DiasSemana.resx">
+      <DependentUpon>202103230137582_ValeTransporte-DiasSemana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103241636213_Sindicato-alteracaoDataBase.resx">
+      <DependentUpon>202103241636213_Sindicato-alteracaoDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103251429000_ColaboradorDocumentacao-DataEmissaoPISNITNIS-ModifyToAcceptNull.resx">
+      <DependentUpon>202103251429000_ColaboradorDocumentacao-DataEmissaoPISNITNIS-ModifyToAcceptNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261741179_NotificaDetalhe-AddColumns.resx">
+      <DependentUpon>202103261741179_NotificaDetalhe-AddColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103261824137_NotificaDetalhe-Modify-NotificacaoStatusId-To-NotificacaoDetalheStatusId.resx">
+      <DependentUpon>202103261824137_NotificaDetalhe-Modify-NotificacaoStatusId-To-NotificacaoDetalheStatusId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109231834341_20210923_FornecedorHolerite_AddColumns.resx">
+      <DependentUpon>202109231834341_20210923_FornecedorHolerite_AddColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110141920304_20211014_DivergenciaDetalhe_AddColumns_JustificativaDivergenciaID.resx">
+      <DependentUpon>202110141920304_20211014_DivergenciaDetalhe_AddColumns_JustificativaDivergenciaID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110142131494_20211014_DivergenciaDetalhe_EditColumn_JustificativaDivergenciaID.resx">
+      <DependentUpon>202110142131494_20211014_DivergenciaDetalhe_EditColumn_JustificativaDivergenciaID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110201943382_PropriedadeNavegacaoJustificativaDivergenciaDetalhe.resx">
+      <DependentUpon>202110201943382_PropriedadeNavegacaoJustificativaDivergenciaDetalhe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202112305407_AdicaoColunaTabelaDocumentos.resx">
+      <DependentUpon>202202112305407_AdicaoColunaTabelaDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\lurin.meurhonline.domain.model\lurin.meurhonline.domain.model.csproj">
+      <Project>{7f7ea167-2581-46e2-925c-24efede945a1}</Project>
+      <Name>lurin.meurhonline.domain.model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

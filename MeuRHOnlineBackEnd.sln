@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{3A858B2F-F5E4-48C6-AB83-BBE539F84877}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4ACAEEEC-417D-4498-826B-8847C2FC715A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E00130AA-73BF-47C0-BB56-C0C7837841D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{3E8390BB-AFC4-4308-86DD-1B8869FE6503}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D2D12271-3CFD-4389-95DE-BBEF0767B89F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.application", "Application\lurin.meurhonline.application\lurin.meurhonline.application.csproj", "{3DD18B50-7757-4900-A6D7-E1F64171283D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.domain.model", "Domain\lurin.meurhonline.domain.model\lurin.meurhonline.domain.model.csproj", "{7F7EA167-2581-46E2-925C-24EFEDE945A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.infrastructure", "Infrastructure\lurin.meurhonline.infrastructure\lurin.meurhonline.infrastructure.csproj", "{592920B7-9870-4FAD-A94C-1583545BE63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.application.Tests", "Test\lurin.meurhonline.application.Tests\lurin.meurhonline.application.Tests.csproj", "{B77553A1-22A7-48E8-B037-B307766C543E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.service.api", "Service\lurin.meurhonline.service.api\lurin.meurhonline.service.api.csproj", "{5C7C0BBA-83D9-48FB-8A47-D5949363438E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.domain.repository.Tests", "Test\lurin.meurhonline.domain.repository.Tests\lurin.meurhonline.domain.repository.Tests.csproj", "{47D98088-C9BB-40EE-90F1-EE4991BAE9BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.domain.repository", "Domain\lurin.meurhonline.domain.repository\lurin.meurhonline.domain.repository.csproj", "{FF0F3BDD-705D-461A-B685-96AE24142E02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.domain", "Domain\lurin.meurhonline.domain\lurin.meurhonline.domain.csproj", "{56A77E18-61E6-4FD0-88B2-2A122CD8C108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lurin.meurhonline.infrastructure.Tests", "Test\lurin.meurhonline.infrastructure.Tests\lurin.meurhonline.infrastructure.Tests.csproj", "{E9C970E4-ED07-4B69-94C3-18CA30EFEFCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DD18B50-7757-4900-A6D7-E1F64171283D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD18B50-7757-4900-A6D7-E1F64171283D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD18B50-7757-4900-A6D7-E1F64171283D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD18B50-7757-4900-A6D7-E1F64171283D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7EA167-2581-46E2-925C-24EFEDE945A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7EA167-2581-46E2-925C-24EFEDE945A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7EA167-2581-46E2-925C-24EFEDE945A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7EA167-2581-46E2-925C-24EFEDE945A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592920B7-9870-4FAD-A94C-1583545BE63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592920B7-9870-4FAD-A94C-1583545BE63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592920B7-9870-4FAD-A94C-1583545BE63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592920B7-9870-4FAD-A94C-1583545BE63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77553A1-22A7-48E8-B037-B307766C543E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77553A1-22A7-48E8-B037-B307766C543E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77553A1-22A7-48E8-B037-B307766C543E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77553A1-22A7-48E8-B037-B307766C543E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7C0BBA-83D9-48FB-8A47-D5949363438E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7C0BBA-83D9-48FB-8A47-D5949363438E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7C0BBA-83D9-48FB-8A47-D5949363438E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7C0BBA-83D9-48FB-8A47-D5949363438E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D98088-C9BB-40EE-90F1-EE4991BAE9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D98088-C9BB-40EE-90F1-EE4991BAE9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D98088-C9BB-40EE-90F1-EE4991BAE9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D98088-C9BB-40EE-90F1-EE4991BAE9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF0F3BDD-705D-461A-B685-96AE24142E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF0F3BDD-705D-461A-B685-96AE24142E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF0F3BDD-705D-461A-B685-96AE24142E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF0F3BDD-705D-461A-B685-96AE24142E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A77E18-61E6-4FD0-88B2-2A122CD8C108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A77E18-61E6-4FD0-88B2-2A122CD8C108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A77E18-61E6-4FD0-88B2-2A122CD8C108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A77E18-61E6-4FD0-88B2-2A122CD8C108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C970E4-ED07-4B69-94C3-18CA30EFEFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C970E4-ED07-4B69-94C3-18CA30EFEFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C970E4-ED07-4B69-94C3-18CA30EFEFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C970E4-ED07-4B69-94C3-18CA30EFEFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DD18B50-7757-4900-A6D7-E1F64171283D} = {3A858B2F-F5E4-48C6-AB83-BBE539F84877}
+		{7F7EA167-2581-46E2-925C-24EFEDE945A1} = {4ACAEEEC-417D-4498-826B-8847C2FC715A}
+		{592920B7-9870-4FAD-A94C-1583545BE63D} = {E00130AA-73BF-47C0-BB56-C0C7837841D2}
+		{B77553A1-22A7-48E8-B037-B307766C543E} = {D2D12271-3CFD-4389-95DE-BBEF0767B89F}
+		{5C7C0BBA-83D9-48FB-8A47-D5949363438E} = {3E8390BB-AFC4-4308-86DD-1B8869FE6503}
+		{47D98088-C9BB-40EE-90F1-EE4991BAE9BA} = {D2D12271-3CFD-4389-95DE-BBEF0767B89F}
+		{FF0F3BDD-705D-461A-B685-96AE24142E02} = {4ACAEEEC-417D-4498-826B-8847C2FC715A}
+		{56A77E18-61E6-4FD0-88B2-2A122CD8C108} = {4ACAEEEC-417D-4498-826B-8847C2FC715A}
+		{E9C970E4-ED07-4B69-94C3-18CA30EFEFCC} = {D2D12271-3CFD-4389-95DE-BBEF0767B89F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A74C6BFA-D98A-4591-BFD6-3084F71305AF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF0F3BDD-705D-461A-B685-96AE24142E02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lurin.meurhonline.domain.repository</RootNamespace>
+    <AssemblyName>lurin.meurhonline.domain.repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cadastro\BeneficioRepository.cs" />
+    <Compile Include="Cadastro\CargoPlanoRepository.cs" />
+    <Compile Include="Cadastro\CargoPlanoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\CargoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\CategorialSalarialRepository.cs" />
+    <Compile Include="Cadastro\CentroCustoPlanoRepository.cs" />
+    <Compile Include="Cadastro\CentroCustoPlanoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\CentroCustoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\CidadeRepository.cs" />
+    <Compile Include="Cadastro\ColaboradorDocumentacaoRepository.cs" />
+    <Compile Include="Cadastro\ColaboradorDocumentoAdmissionalRepository.cs" />
+    <Compile Include="Cadastro\ColaboradorEmpregadorRepository.cs" />
+    <Compile Include="Cadastro\ColaboradorEstrangeiroRepository.cs" />
+    <Compile Include="Cadastro\ColaboradorPagamentoRepository.cs" />
+    <Compile Include="Cadastro\ColaboradorRepository.cs" />
+    <Compile Include="Cadastro\DependenteRepository.cs" />
+    <Compile Include="Cadastro\DocumentoAdmissionalRepository.cs" />
+    <Compile Include="Cadastro\EmpresaDocumentoAdmissionalRepository.cs" />
+    <Compile Include="Cadastro\EmpresaEmpresaFuncionalidadeRepository.cs" />
+    <Compile Include="Cadastro\EmpresaFuncionalidadeRepository.cs" />
+    <Compile Include="Cadastro\EmpresaRepository.cs" />
+    <Compile Include="Cadastro\EquipeGestorRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICargoPlanoRepository.cs" />
+    <Compile Include="Cadastro\Interface\IBeneficioRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICargoPlanoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICargoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\IOperadoraVTBandeiraCartaoRepository.cs" />
+    <Compile Include="Cadastro\OperadoraVTBandeiraCartaoRepository.cs" />
+    <Compile Include="Importação\AbsenteismoRepository.cs" />
+    <Compile Include="Importação\AvisoFeriasRepository.cs" />
+    <Compile Include="Importação\BancoHorasLogRepository.cs" />
+    <Compile Include="Importação\BancoHorasRepository.cs" />
+    <Compile Include="Importação\CartaoPontoCabecalhoRepository.cs" />
+    <Compile Include="Importação\CartaoPontoDetalheRepository.cs" />
+    <Compile Include="Importação\CartaoPontoRepository.cs" />
+    <Compile Include="Importação\DivergenciaDetalheRepository.cs" />
+    <Compile Include="Importação\DivergenciaRepository.cs" />
+    <Compile Include="Importação\FeriasPeriodoRepository.cs" />
+    <Compile Include="Importação\FeriasRepository.cs" />
+    <Compile Include="Importação\HoleriteRepository.cs" />
+    <Compile Include="Importação\Interface\IAbsenteismoRepository.cs" />
+    <Compile Include="Importação\Interface\IAvisoFeriasRepository.cs" />
+    <Compile Include="Importação\Interface\IBancoHorasLogRepository.cs" />
+    <Compile Include="Importação\Interface\IBancoHorasRepository.cs" />
+    <Compile Include="Importação\Interface\ICartaoPontoCabecalhoRepository.cs" />
+    <Compile Include="Importação\Interface\ICartaoPontoDetalheRepository.cs" />
+    <Compile Include="Importação\Interface\IDivergenciaColaboradorRepository.cs" />
+    <Compile Include="Importação\Interface\IDivergenciaDetalheRepository.cs" />
+    <Compile Include="Importação\Interface\IDivergenciaRepository.cs" />
+    <Compile Include="Importação\Interface\IFeriasPeriodoRepository.cs" />
+    <Compile Include="Importação\Interface\IFeriasRepository.cs" />
+    <Compile Include="Importação\Interface\IHoleriteRepository.cs" />
+    <Compile Include="Importação\Interface\IReciboFeriasRepository.cs" />
+    <Compile Include="Importação\ReciboFeriasRepository.cs" />
+    <Compile Include="Importação\Interface\ICartaoPontoRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICategoriaSalarialRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICentroCustoPlanoRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICentroCustoPlanoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\IColaboradorDocumentacaoRepository.cs" />
+    <Compile Include="Cadastro\Interface\IColaboradorDocumentoAdmissionalRepository.cs" />
+    <Compile Include="Cadastro\Interface\IColaboradorEmpregadorRepository.cs" />
+    <Compile Include="Cadastro\Interface\IColaboradorEstrangeiroRepository.cs" />
+    <Compile Include="Cadastro\Interface\IColaboradorPagamentoRepository.cs" />
+    <Compile Include="Cadastro\Interface\IColaboradorRepository.cs" />
+    <Compile Include="Cadastro\Interface\IDependenteRepository.cs" />
+    <Compile Include="Cadastro\Interface\IDocumentoAdmissionalRepository.cs" />
+    <Compile Include="Cadastro\Interface\IEmpresaDocumentoAdmissionalRepository.cs" />
+    <Compile Include="Cadastro\Interface\IEmpresaEmpresaFuncionalidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\IEmpresaFuncionalidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\IEmpresaRepository.cs" />
+    <Compile Include="Cadastro\Interface\IEquipeGestorRepository.cs" />
+    <Compile Include="Cadastro\Interface\ILinhaVTRepository.cs" />
+    <Compile Include="Cadastro\Interface\ILotacaoPlanoRepository.cs" />
+    <Compile Include="Cadastro\Interface\ILotacaoPlanoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\ILotacaoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\Interface\IMarmitexRepository.cs" />
+    <Compile Include="Importação\InformeRendimentoRepository.cs" />
+    <Compile Include="Importação\Interface\IInformeRendimentoRepository.cs" />
+    <Compile Include="Lançamento\AtestadoRepository.cs" />
+    <Compile Include="Lançamento\Interface\IAtestadoRepository.cs" />
+    <Compile Include="Login\Interface\ILoginRepository.cs" />
+    <Compile Include="Login\LoginRepository.cs" />
+    <Compile Include="Login\MenuRepository.cs" />
+    <Compile Include="Notificação\Interface\INotificacaoRepository.cs" />
+    <Compile Include="Cadastro\Interface\IOperadoraVTRepository.cs" />
+    <Compile Include="Cadastro\Interface\ISindicatoRepository.cs" />
+    <Compile Include="Cadastro\Interface\ITurnoDetalheRepository.cs" />
+    <Compile Include="Cadastro\Interface\ITurnoRepository.cs" />
+    <Compile Include="Cadastro\Interface\IUnidadeNegocioRepository.cs" />
+    <Compile Include="Cadastro\Interface\IUsuarioRepository.cs" />
+    <Compile Include="Cadastro\LinhaVTRepository.cs" />
+    <Compile Include="Cadastro\LotacaoPlanoRepository.cs" />
+    <Compile Include="Cadastro\LotacaoPlanoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\LotacaoUnidadeRepository.cs" />
+    <Compile Include="Cadastro\MarmitexRepository.cs" />
+    <Compile Include="Cadastro\Interface\ITipoRegistroRepository.cs" />
+    <Compile Include="Cadastro\Interface\IMotivoHoraExtraRepository.cs" />
+    <Compile Include="Cadastro\MotivoHoraExtraRepository.cs" />
+    <Compile Include="Cadastro\Interface\ITipoMaoObraRepository.cs" />
+    <Compile Include="Cadastro\Interface\IJustificativaDivergenciaRepository.cs" />
+    <Compile Include="Cadastro\JustificativaDivergenciaRepository.cs" />
+    <Compile Include="Cadastro\Interface\ICentroCustoUnidadeRepository.cs" />
+    <Compile Include="Notificação\NotificacaoRepository.cs" />
+    <Compile Include="Cadastro\OperadoraVTRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cadastro\SindicatoRepository.cs" />
+    <Compile Include="Cadastro\TipoRegistroRepository.cs" />
+    <Compile Include="Cadastro\TipoMaoObraRepository.cs" />
+    <Compile Include="Cadastro\TurnoDetalheRepository.cs" />
+    <Compile Include="Cadastro\TurnoRepository.cs" />
+    <Compile Include="Cadastro\UnidadeNegocioRepository.cs" />
+    <Compile Include="Cadastro\UsuarioRepository.cs" />
+    <Compile Include="Solicitação\AlteracaoCadastralRepository.cs" />
+    <Compile Include="Solicitação\BeneficioColaboradorRepository.cs" />
+    <Compile Include="Solicitação\BeneficioDependenteRepository.cs" />
+    <Compile Include="Solicitação\DesligamentoRepository.cs" />
+    <Compile Include="Solicitação\Interface\IAlteracaoCadastralRepository.cs" />
+    <Compile Include="Solicitação\Interface\IBeneficioColaboradorRepository.cs" />
+    <Compile Include="Solicitação\Interface\IBeneficioDependenteRepository.cs" />
+    <Compile Include="Solicitação\Interface\IDesligamentoRepository.cs" />
+    <Compile Include="Solicitação\Interface\IMovimentacaoContratualRepository.cs" />
+    <Compile Include="Solicitação\Interface\ISolicitacaoHoraExtraRepository.cs" />
+    <Compile Include="Solicitação\Interface\IValeTransporteRepository.cs" />
+    <Compile Include="Solicitação\MovimentacaoContratualRepository.cs" />
+    <Compile Include="Solicitação\SolicitacaoHoraExtraRepository.cs" />
+    <Compile Include="Solicitação\ValeTransporteRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="Login\Interface\IMenuRepository.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\lurin.meurhonline.infrastructure\lurin.meurhonline.infrastructure.csproj">
+      <Project>{592920b7-9870-4fad-a94c-1583545be63d}</Project>
+      <Name>lurin.meurhonline.infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\lurin.meurhonline.domain.model\lurin.meurhonline.domain.model.csproj">
+      <Project>{7f7ea167-2581-46e2-925c-24efede945a1}</Project>
+      <Name>lurin.meurhonline.domain.model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

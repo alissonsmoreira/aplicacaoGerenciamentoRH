@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47D98088-C9BB-40EE-90F1-EE4991BAE9BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lurin.meurhonline.domain.repository.Tests</RootNamespace>
+    <AssemblyName>lurin.meurhonline.domain.repository.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework">
+      <HintPath>..\..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions">
+      <HintPath>..\..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlteracaoCadastralRepositoryTests.cs" />
+    <Compile Include="AtestadoRepositoryTests.cs" />
+    <Compile Include="AvisoFeriasRepositoryTest.cs" />
+    <Compile Include="BeneficioColaboradorRepositoryTests.cs" />
+    <Compile Include="BeneficioRepositoryTests.cs" />
+    <Compile Include="CargoPlanoRepositoryTests.cs" />
+    <Compile Include="CargoUnidadeRepositoryTest.cs" />
+    <Compile Include="CartaoPontoRepositoryTest.cs" />
+    <Compile Include="CategoriaSalarialTests.cs" />
+    <Compile Include="CentroCustoPlanoRepositoryTests.cs" />
+    <Compile Include="ColaboradorDocumentacaoRepositoryTests.cs" />
+    <Compile Include="ColaboradorDocumentoAdmissionalRepositoryTests.cs" />
+    <Compile Include="ColaboradorEmpregadoRepositoryTests.cs" />
+    <Compile Include="ColaboradorEstrangeiroRepositoryTests.cs" />
+    <Compile Include="ColaboradorPagamentoRepositoryTests.cs" />
+    <Compile Include="ColaboradorRepositoryTests.cs" />
+    <Compile Include="DependenteRepositoryTests.cs" />
+    <Compile Include="DesligamentoRepositoryTests.cs" />
+    <Compile Include="AbsenteismoRepositoryTests.cs" />
+    <Compile Include="DocumentoAdmissionalRepositoryTests.cs" />
+    <Compile Include="EmpresaRepositoryTests.cs" />
+    <Compile Include="EquipeGestorRepositoryTests.cs" />
+    <Compile Include="FeriasPeriodoRepositoryTests.cs" />
+    <Compile Include="FeriasRepositoryTests.cs" />
+    <Compile Include="HoleriteRepositoryTest.cs" />
+    <Compile Include="DivergenciaRepositoryTests.cs" />
+    <Compile Include="ReciboFeriasRepositoryTests.cs" />
+    <Compile Include="InformeRendimentoRepositoryTests.cs" />
+    <Compile Include="LinhaVTRepositoryTests.cs" />
+    <Compile Include="LotacaoPlanoRepositoryTests.cs" />
+    <Compile Include="LotacaoUnidadeRepositoryTests.cs" />
+    <Compile Include="MarmitexRepositoryTests.cs" />
+    <Compile Include="MotivoHoraExtraRepositoryTests.cs" />
+    <Compile Include="JustificativaDivergenciaRepositoryTests.cs" />
+    <Compile Include="CentroCustoUnidadeRepositoryTests.cs" />
+    <Compile Include="MovimentacaContratualRepositoryTests.cs" />
+    <Compile Include="NotificacaoRepositoryTests.cs" />
+    <Compile Include="OperadoraVTRepositoryTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SindicatoRepositoryTests.cs" />
+    <Compile Include="SolicitacaoHoraExtraRepositoryTests.cs" />
+    <Compile Include="TipoRegistroRepositoryTests.cs" />
+    <Compile Include="TipoMaoObraTests.cs" />
+    <Compile Include="TurnoDetalheRepositoryTests.cs" />
+    <Compile Include="TurnoRepositoryTests.cs" />
+    <Compile Include="UnidadeNegocioRepositoryTests.cs" />
+    <Compile Include="UsuarioRepositoryTests.cs" />
+    <Compile Include="ValeTransporteRepositoryTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\lurin.meurhonline.domain.model\lurin.meurhonline.domain.model.csproj">
+      <Project>{7f7ea167-2581-46e2-925c-24efede945a1}</Project>
+      <Name>lurin.meurhonline.domain.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\lurin.meurhonline.domain.repository\lurin.meurhonline.domain.repository.csproj">
+      <Project>{ff0f3bdd-705d-461a-b685-96ae24142e02}</Project>
+      <Name>lurin.meurhonline.domain.repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\lurin.meurhonline.infrastructure\lurin.meurhonline.infrastructure.csproj">
+      <Project>{592920b7-9870-4fad-a94c-1583545be63d}</Project>
+      <Name>lurin.meurhonline.infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
